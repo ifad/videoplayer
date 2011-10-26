@@ -1,0 +1,54 @@
+/** Video styles **/
+
+.video {
+  width: 600px;
+  height: 400px;
+}
+
+.video.loading {
+  background: #ddd url(loader-video.gif) no-repeat center center;
+}
+
+.video .error {
+  margin: 10px;
+  padding: 5px;
+  position: relative;
+  top: 125px;
+  background-color: #fff;
+
+}
+
+.video .error img {
+  float: left;
+  margin-right: 10px;
+}
+
+/** Notification styles **/
+#notification {
+  display: none;
+
+  margin: 14px 10px;
+  font-size: 14px;
+  padding: 8px;
+  background-color: #FCC;
+
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+
+  box-shadow: #ccc 2px 2px 4px;
+  -webkit-box-shadow: #ccc 2px 2px 4px;
+  -moz-box-shadow: #ccc 2px 2px 4px;
+  -ms-box-shadow: #ccc 2px 2px 4px;
+  -o-box-shadow: #ccc 2px 2px 4px;
+}
+
+#notification .close {
+  display: inline-block;
+  float: right;
+  font-style: italic;
+  font-size: 11px;
+  font-weight: normal;
+}

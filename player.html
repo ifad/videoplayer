@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>IFAD Video Player</title>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/flowplayer-3.2.6.min.js"></script>
+  <script type="text/javascript" src="javascripts/video.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+</head>
+  
+<body>
+
+  <h1>Video Player Demo :-)</h1>
+
+  <div id="notification">
+    <span class="text"></span>
+    <a href="#" class="close">close</a>
+  </div>
+
+  <div class="video"
+    data-player="flash/flowplayer-3.2.7.swf"
+    data-controls="flash/flowplayer.controls-3.2.5.swf"
+    data-rtmp="flash/flowplayer.rtmp-3.2.3.swf">
+
+    <div class="loading player"
+      data-source="rtmp://example.org/example"
+      data-stream="example/stream-name"
+      data-autoplay="true">
+    </div>
+
+    <div style="display:none" class="errors">
+      <div class="error noflash ui-helper-clearfix">
+        <img src="images/error-noflash.jpg" />
+        <h3>You need Flash Player to view the video stream</h3>
+        <p>You can <%= link_to 'download it here', 'http://get.adobe.com/flashplayer/' %>.</p>
+      </div>
+
+      <div class="error iosdevice ui-helper-clearfix">
+        <img src="images/error-iosdevice.png" />
+        <h3>The video stream may not display on all devices.</h3>
+        <p>After the event, a full archive of the Share Fair videos will be available at:
+          <%= link_to 'http://www.ifad.org/events/sharefair', 'http://www.ifad.org/events/sharefair' %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
