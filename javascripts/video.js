@@ -117,26 +117,28 @@ $.fn.IFADvideoPlayer = function () {
  *
  * -- m.barnaba@ifad.org  Wed Oct 26 12:25:45 CEST 2011
  */
-$.IFADnotify = (function () {
+$.IFADnotify = function (str) {
   var note  = $('#notification'),
       text  = note.find ('.text'),
       close = note.find ('.close');
 
-  close.click (function (event) {
-    event.preventDefault ();
+  if (!close.data ('notify-inited')) {
+    close.click (function (event) {
+      event.preventDefault ();
 
-    note.stop (true, true);
-    note.fadeOut ('slow', function () { text.empty () });
-  });
+      note.stop (true, true);
+      note.fadeOut ('slow', function () { text.empty () });
+    });
 
-  return function (str) {
-    text.text (str);
+    close.data ('notify-inited', true);
+  }
 
-    note.stop (true, true);
-    note.slideDown ('slow');
-    note.effect ('highlight', 4000);
-  };
-}) ();
+  text.text (str);
+
+  note.stop (true, true);
+  note.slideDown ('slow');
+  note.effect ('highlight', 4000);
+}
 
 $(function () {
 
