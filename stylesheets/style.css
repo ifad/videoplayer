@@ -1,5 +1,10 @@
-/** Video styles **/
+/** Generic styles **/
 
+#wrapper {
+  width: 600px;
+}
+
+/** Video styles **/
 .video {
   width: 600px;
   height: 400px;
